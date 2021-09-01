@@ -3,18 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <style>
-    body { font-family: Arial, Helvetica, sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+
+    body { font-family: 'Oswald', sans-serif;
         font-size: 24px;
+        background-color: #141417;
+    }  
+    #myCalculator{
+        margin-left: calc(50% - 420px);
+        margin-top: 15%;
+    }
+    
+    .display{
+        width: 450px;
+        height: 295px;
+        font-size: 46px;
+        float: left;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        box-shadow: 1px 1px 15px #0f0f0f;
+    }
+    #display{
+        text-align: center;
+
+    }
+    .number{
+        font-size: 20px;
+        width: 70px;
+        height: 70px;
+        color: white;
+        background-color: #303147;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Oswald', sans-serif;
+        box-shadow: 1px 1px 10px #0f0f0f;
+        
+    }
+    .number:hover{
+        background-color: #191a20;
+    }
+    .number:active{
+        color:#575961 ;
     }
 
-    form{
-        padding-left: 2%;
-        padding-top: 3%;
+    .operator{
+        font-size: 20px;
+        width: 70px;
+        height: 70px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #0f0f0f;
+    }
+    .operator:hover{
+        background-color: #727272;
+    }
+    .operator:active{
+        color:#535353 ;
 
+    }
+    input[name="eqauls"] {
+       background-color: tomato;
+       height: 295px;
+       float: right;
+       margin-right: 295px;
+       margin-top: -225px;
+       font-family: 'Oswald', sans-serif;
+       box-shadow: 1px 1px 10px #0f0f0f;
+    }
+    input[name="eqauls"]:hover{
+
+        background-color: rgb(206, 87, 66);
+
+    }
+    input[name="clear"]{
+        font-family: 'Oswald', sans-serif;
+        height: 145px;
+        float: right;
+        margin-right: 373px;
+        margin-top: -75px;
+        box-shadow: 1px 1px 10px #0f0f0f;
     }
 
     .inputFlow{
         padding-left: 12%;
+        height:75px;
+    
     }
 
     .inputRow{
@@ -29,11 +107,10 @@
 <form name="calculator">
 
     <div id="myCalculator">     
-    </div>
 
 
     <div id="topDisplay">  
-        <input type="text" name="display" id="display" disabled>   
+        <input type="text" class="display" id="display" disabled>   
     </div>
 
     <div class="inputFlow">
@@ -45,6 +122,8 @@
 
         <input type="button" class="number" value="3"
         onclick="calculator.display.value+='3'">
+
+        
 
     </div>
 
@@ -63,6 +142,8 @@
 
         <input type="button" class="operator" name="clear" value="C"
         onclick="calculator.display.value=''">
+
+        
     
 
 
@@ -91,7 +172,7 @@
     </div>
 
 
-<div class="inputRow">
+    <div class="inputRow">
     <input type="button" class="operator" name="add" value="+"
     onclick="calculator.display.value+='+'">
  
@@ -108,7 +189,7 @@
    <input type="button" class="operator" name="eqauls" value="="
     onclick="calculator.display.value= eval(calculator.display.value)">
 
-
+  </div>
 
 </div>
 
