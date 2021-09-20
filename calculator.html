@@ -13,28 +13,42 @@
     }  
     #myCalculator{
         margin-left: calc(50% - 340px);
-        margin-top: 13%;
+        margin-top: 12.5%;
     }
-  
+    .displayThree {
+        width: 1945px;
+        height: 320px;
+        margin-left: -620px;
+        font-size: 240px;        
+        font-family: 'Oswald', sans-serif;
+        color: #B5463E;
+        border: none;
+        background-color: #A5372B;
+        position: relative;
+        bottom: 545px;
+        left: 0px;
+        z-index: -3;
+    }
     .displayTwo {
         width: 1945px;
         height: 320px;
-        margin-left: -640px;
-        font-size: 250px;        
+        margin-left: -620px;
+        padding-left: 0px;
+        font-size: 240px;        
         font-family: 'Oswald', sans-serif;
-        color: white;
+        color: #B5463E;
         border: none;
         background-color: #A5372B;
         position: relative;
         top: 275px;
-        left: 1px;
+        left: 0px;
         z-index: -3;
     }
     .display{
         width: 1945px;
         height: 320px;
         margin-left: -640px;
-        font-size: 280px;
+        font-size: 300px;
         border-radius: 5px;
         border: none;
         font-family: 'Oswald', sans-serif;
@@ -46,12 +60,14 @@
     }
     #display{
         text-align: center;
-        
     }
     #displayTwo{
         text-align: center;
-
     }
+    #displayThree{
+        text-align: center;
+    }
+
     .number{
         font-size: 30px;
         margin-left: 1px;
@@ -82,7 +98,7 @@
         height: 81px;
         float: left !important;
         margin-left: 367px !important;
-        margin-top: 780px;
+        margin-top: 1100px;
         box-shadow: 1px 1px 10px #0f0f0f;
         border: none;
         background-color: #D87735;
@@ -98,7 +114,7 @@
        font-size: 62px;
        text-align: center;
        margin-left: 542px !important;
-       margin-top: 780px;
+       margin-top: 1100px;
        width: 220px;
        height: 81px;
        font-family: 'Oswald', sans-serif;
@@ -131,7 +147,7 @@
     .inputFlow{
         float: left;
         height:70px;
-        margin-top: -410px;
+        margin-top: -730px;
         margin-left: -13px;
         position: fixed;
     }
@@ -155,68 +171,65 @@
 
     <div id="topDisplay">  
         <input type="text" class="display" id="display" disabled> 
-          
         <input type="text" class="displayTwo" id="displayTwo" disabled> 
+        <input type="text" class="displayThree" id="displayThree" disabled>
  
        
     </div>
 
-    
-       
 
     <div class="inputFlow">
         <input type="button" class="number" value="1"
-        onclick="calculator.display.value+='1'">
+        onclick="calculator.display.value+='1';calculator.displayTwo.value+='1';calculator.displayThree.value+='1'">
     
         <input type="button" class="number" value="2"
-        onclick="calculator.display.value+='2'">
+        onclick="calculator.display.value+='2';calculator.displayTwo.value+='2';calculator.displayThree.value+='2'">
 
         <input type="button" class="number" value="3"
-        onclick="calculator.display.value+='3'">
+        onclick="calculator.display.value+='3';calculator.displayTwo.value+='3';calculator.displayThree.value+='3'">
  
 
         <input type="button" class="number" value="4"
-        onclick="calculator.display.value+='4'">
+        onclick="calculator.display.value+='4';calculator.displayTwo.value+='4';calculator.displayThree.value+='4'">
 
 
         <input type="button" class="number" value="5"
-        onclick="calculator.display.value+='5'">
+        onclick="calculator.display.value+='5';calculator.displayTwo.value+='5';calculator.displayThree.value+='5'">
 
 
         <input type="button" class="number" value="6"
-        onclick="calculator.display.value+='6'">
+        onclick="calculator.display.value+='6';calculator.displayTwo.value+='6';calculator.displayThree.value+='6'">
 
     
 
         <input type="button" class="number" value="7"
-        onclick="calculator.display.value+='7'">
+        onclick="calculator.display.value+='7';calculator.displayTwo.value+='7';calculator.displayThree.value+='7'">
 
 
         <input type="button" class="number" value="8"
-        onclick="calculator.display.value+='8'">
+        onclick="calculator.display.value+='8';calculator.displayTwo.value+='8';calculator.displayThree.value+='8'">
 
 
         <input type="button" class="number" value="9"
-        onclick="calculator.display.value+='9'">
+        onclick="calculator.display.value+='9';calculator.displayTwo.value+='9';calculator.displayThree.value+='9'">
 
         <input type="button" class="number" name="zero" value="0"
-        onclick="calculator.display.value+='0'">
+        onclick="calculator.display.value+='0';calculator.displayTwo.value+='0';calculator.displayThree.value+='0'">
 
-        
 
     <div class="inputFlow">
 
   
 
         <input type="button" class="operator" name="clear" value="C"
-        onclick="calculator.display.value=''">
+        onclick="calculator.display.value='';calculator.displayTwo.value='';calculator.displayThree.value=''">
 
         
     </div>
 
     <div class="inputFlow">
         <input type="button" class="operator" name="eqauls" value="="
-        onclick="calculator.display.value= eval(calculator.display.value)">
+        onclick="calculator.display.value= eval(calculator.display.value);calculator.displayTwo.value=eval(calculator.display.value);calculator.displayThree.value=eval(calculator.display.value)">
      
         
     </div>
@@ -224,17 +237,17 @@
 
     <div class="inputRow">
         <input type="button" class="operator" name="add" value="+"
-        onclick="calculator.display.value+='+'">
+        onclick="calculator.display.value+='+';calculator.displayTwo.value+='+';calculator.displayThree.value+='+'">
      
         <input type="button" class="operator" name="minus" value="-"
-        onclick="calculator.display.value+='-'">
+        onclick="calculator.display.value+='-';calculator.displayTwo.value+='-';calculator.displayThree.value+='-'">
     
      
         <input type="button" class="operator" name="multiply" value="*"
-        onclick="calculator.display.value+='*'">
+        onclick="calculator.display.value+='*';calculator.displayTwo.value+='*';calculator.displayThree.value+='*'">
     
         <input type="button" class="operator" name="divide" value="/"
-        onclick="calculator.display.value+='/'">
+        onclick="calculator.display.value+='/';calculator.displayTwo.value+='/';calculator.displayThree.value+='/'">
     
      
       </div>
