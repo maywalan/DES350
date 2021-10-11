@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>10 Principles of Good Design</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<meta name="viewport" content="width-device-width, initial scale=1.0">
+
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+  
+    </script>
+
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body{
+        font-family: Helvetica, sans-serif;
+        background: #F46C6C;
+        color: white;
+       
+    }
+    .container{
+        margin: 50px;
+    }
+    .first{
+        float: left;
+        height: 800px;
+        position: relative;
+        top:-350px;
+    }
+    .ten{
+        font-size: 680px;
+        position: relative;
+        top: -220px;
+        color: #31437A;
+        letter-spacing: -80px;
+    }
+    
+    .header{
+        font-size: 67px;
+        position: relative;
+        bottom:800px;
+        left: 155px;
+        width: 1200px;
+    }
+
+    .decoration{
+        position:fixed;
+        left:-320px;
+        top:200px;
+        font-weight: 700;
+        opacity: .1;
+        font-size: 300px;
+        transform: rotate(-90deg);
+        z-index: -2;
+
+    }
+    .decorationright{
+        position:fixed;
+        left: 850px;
+        top:320px;
+        font-weight: 700;
+        opacity: .1;
+        font-size: 210px;
+        transform: rotate(90deg);
+        z-index: -2;
+    
+    }
+    .decorationmid{
+
+        position:absolute;
+        left: 40px;
+        top:2080px;
+        font-weight: 700;
+        opacity: .3;
+        font-size: 300px;
+        transform: rotate(90deg);
+        z-index: -2;
+     
+    
+
+    }
+    .decorationbottom{
+       
+      
+        position:absolute;
+        left: 480px;
+        top: 4970px;
+        font-weight: 700;
+        opacity: .2;
+        font-size: 280px;
+        z-index: -2;
+     
+    }
+    .decorationbottom-2{
+        position:absolute;
+        left: 100px;
+        top: 3700px;
+        font-weight: 700;
+        opacity: .2;
+        font-size: 270px;
+        z-index: -2;
+        overflow: hidden;
+       letter-spacing: -10px;
+
+    }
+
+
+
+/* Nav bar */
+    .navbar{
+       position: fixed;
+       top: 50px;
+       left: 1320px;
+    }
+    .number{
+        display: block;
+        padding-top: 10px;
+        padding-left:16px ;
+        width: 28px;
+        margin-bottom: 18px;
+        font-size: 26px;
+        font-weight: 800;
+        background: #FFCACA;
+        color: #31437A;
+        text-decoration: none;
+        padding-right:3px;
+    }
+    .number:hover{
+        background-color: #31437A;
+        transition: transform .2s;
+        transform: scale(1.4);
+    }
+    a{
+        height: 35px;
+        border-radius: 50%;
+    
+    }
+    a:hover{
+        color: white;
+    }
+   #navTen{
+    padding-left: 10px;
+    height: 38px;
+    width: 38px;
+   }
+/*text*/
+
+
+.text{
+    position: absolute;
+    top: 1200px;
+    float: left;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+h3{
+    font-size: 330px;
+}
+.headnumberleft{
+    position: absolute;
+    top:-700px;
+    left: -65px;
+    color: #31437A;
+    
+}
+p{
+    font-size: 24px;
+    font-weight: lighter;
+}
+h2{
+    font-size: 54px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    width: 350px;
+}
+.headnumberright{
+    font-size: 330px;
+    position: absolute;
+    top: -280px;
+    left: 640px;
+    color: #31437A;
+   
+}
+.textright{
+    position: relative;
+    left:650px;
+}
+.leftText{
+    margin-bottom: 160px;
+
+}
+#section3{
+    top: 0px;
+    left: 0px;
+}
+#section4{
+   top:390px;
+}
+#section5{
+    top:690px;
+    left:0px;
+}
+#section6{
+    top:1170px;
+}
+#section7{
+    top:1520px;
+    left:0px;
+}
+#section8{
+    top:2060px;
+}
+#section9{
+    top:2350px;
+    left:0px;
+}
+#section10{
+    top:2820px;
+    letter-spacing: -30px;
+    left:575px
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="decoration">Good</div> 
+<div class="decorationright">Design</div> 
+<div class="decorationbottom-2">Good</div> 
+<div class="decorationmid">Principle</div> 
+<div class="decorationbottom">Design</div> 
+
+<div class="first">
+<h1 data-aos="fade-left" class="ten">
+    10
+</h1>
+
+<h1 data-aos="fade-left"  data-aos-duration="1500" class="header">
+Principles  of Good Design
+</h1>
+</div>
+
+
+<div class="navbar">
+
+   <a class="number" href="#section1">1</a>
+   <a class="number" href="#section2">2</a>
+   <a class="number" href="#section3">3</a>
+   <a class="number" href="#section4">4</a>
+   <a class="number" href="#section5">5</a>
+   <a class="number" href="#section6">6</a>
+   <a class="number" href="#section7">7</a>
+   <a class="number" href="#section8">8</a>
+   <a class="number" href="#section9">9</a>
+   <a class="number" href="#section10" id="navTen">10</a>
+
+</div>
+
+
+
+
+<div class="text">
+
+    <div data-aos="fade-up" class="leftText">  
+    <h3 class="headnumberleft"  id="section1">1</h3>
+    <h2 data-aos="fade-up">Good design is convenient</h2>
+    <p data-aos="fade-up">This means the design have to be user friendly and 
+    easy to understand how the design product works 
+    and functions.</p>
+    </div> 
+
+
+
+<h3 class="headnumberright" id="section2" data-aos="fade-up">2</h3>
+<h2 class="textright" data-aos="fade-up">Good design is up-to-date</h2>
+<p class="textright" data-aos="fade-up">
+It is important that your design is up-to-date to the current trend 
+in order to understand the movement in design styles.</p>
+
+<div class="leftText">  
+<h3 class="headnumberleft"  id="section3" data-aos="fade-up">3</h3>
+<h2 data-aos="fade-up">Good design is aesthetic</h2>
+<p data-aos="fade-up">The aesthetic of the design will reflect 
+on the attention to details of the designer.
+</p>
+</div>
+
+<h3 class="headnumberright" id="section4" data-aos="fade-up">4</h3>
+<h2 class="textright" data-aos="fade-up">Good design have to be useful</h2>
+<p class="textright" data-aos="fade-up">
+The role of designer is to solve particular issues,
+so it important to consider the benefit of the design product.
+</p>
+
+
+<div class="leftText">  
+<h3 class="headnumberleft"  id="section5" data-aos="fade-up">5</h3>
+<h2 data-aos="fade-up">Good design is attention to details</h2>
+<p data-aos="fade-up">
+Attention to details show the dedication and observation 
+ of the designer and help with the overall aesthetic of design product.
+</p>
+</div>
+
+
+<h3 class="headnumberright" id="section6" data-aos="fade-up">6</h3>
+<h2 class="textright" data-aos="fade-up">Good design have to be reusable</h2>
+<p class="textright" data-aos="fade-up">
+Good design have to be able to reuse its materials or styles even 
+the time past because the part of design is to plan for the future.  
+</p>
+
+
+<div class="leftText">  
+<h3 class="headnumberleft"  id="section7" data-aos="fade-up">7</h3>
+<h2 data-aos="fade-up">Good design have to be safe</h2>
+<p data-aos="fade-up">The safety of the design must be the first priority 
+    regardless of what designer is designing for because designers 
+    have to take the consideration that they design for people to use it.
+</p>
+</div>
+
+<h3 class="headnumberright" id="section8" data-aos="fade-up">8</h3>
+<h2 class="textright" data-aos="fade-up">Good design is sincere</h2>
+<p class="textright" data-aos="fade-up">
+    If designer did not attempt to manipulate the function of the product, 
+    they can optimize the function of the designed product to be more effective.
+</p>
+
+
+<div class="leftText">  
+<h3 class="headnumberleft"  id="section9" data-aos="fade-up">9</h3>
+<h2 data-aos="fade-up">Good design is simple</h2>
+<p data-aos="fade-up">
+    Simplicity design applying to designer who understand the 
+    style of their design and not to overwhelming user with a 
+    lot of information. It unnecessarily to use all design styles 
+    on one project.
+</p>
+</div>
+
+<h3 class="headnumberright" id="section10" data-aos="fade-up">10</h3>
+<h2 class="textright" data-aos="fade-up">Good design is reliable</h2>
+<p class="textright" data-aos="fade-up">
+    A part of the designer is to make sure that users are willing to 
+    use and trust in the design product. So, it is a significant part 
+    that designer can earn trust from the users.
+
+</p>
+</div>
+
+
+</div>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
