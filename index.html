@@ -3,30 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <title>Matach</title>
-
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style>
     body {background-color: bisque;
     font-family:  Helvetica, Arial, sans-serif;
     padding-left: 5%;
     padding-top: 10%;
     }
+    .fullHeader{
+        margin-left: -25px;
+    }
+    h1{
+        font-size: 165px;
+        position: absolute;
+        top:10px;
+        margin: 0px;
+
+    }
+    h2{
+        font-size: 100px;
+
+    }
+    .headerName{
+        position: absolute;
+        top: 50px;
+    }
+    .name1{
+        position: absolute;
+        top: 240px;
+        left: 230px;
+    }
+    .name2{
+        position: absolute;
+        top: 370px;
+        line-height: 90px;
+    }
+    h3{
+        font-size: 32px;
+        
+    }
+    .rightHeader{
+        
+        position: fixed;
+        right: 40px;
+        top: 50px;
+        float: left;
+
+    }
+    ul{
+        text-align: right;
+        position: fixed;
+        top:150px;
+        right: 40px;
+        line-height: 25px;
+        float: left;
+    
+    }
+    a{
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: black;
+        display: block;
+        
+    }
+    a:hover{
+        color: rgb(151, 0, 0);
+        font-size: 1.5rem;
+        transition: all .2s ease-in-out;
+    }
+
+
+    .about{
+        position: fixed;
+        top: 405px;
+        left: 775px;
+
+    }
+
+    .shapes{
+        display: block;
+    }
+    .circle{
+        width: 40px;
+        height: 40px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 430px;
+        left: 980px;
+        z-index: -2;
+    }
+    .circle:hover{
+
+        background: rgb(151, 0, 0);
+        transition: all .4s ease-in-out;
+        transform: scale(1.5);
+
+    }
+    .triangle{
+        width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 40px solid black;
+      position: absolute;
+        top: 428px;
+        left: 1040px;
+    }
+    .triangle:hover{
+        border-bottom-color: rgb(151, 0, 0);
+        transition: all .4s ease-in-out;
+        transform: scale(1.5);
+    }
+    .square{
+        width: 40px;
+         height: 40px;
+        background: black;
+        position: absolute;
+        top: 428px;
+        left: 1105px;
+    }
+    .square:hover{
+        background: rgb(151, 0, 0);
+        transition: all .4s ease-in-out;
+        transform: scale(1.5);
+    }
+    p{
+        font-size: 1.2rem;
+        width: 620px;
+        text-align: left;
+        line-height: 35px;
+        position: fixed;
+        top: 470px;
+        left: 775px;
+        
+    }
+
 
 </style>
 </head>
 
 <body>
-<h1>
-Matach Walanchanurak - DES 350
-</h1>
-This is my home page
+
+<div class="fullHeader">
+   
+    <a href="https://mjanic3.github.io/DES350/index.html">
+    <h1 data-aos="fade-right">
+    DES 350
+    </h1></a>
+
+<div class="headerName">
+    <a href="http://www.uicdesign.com/portfolios/Matach-Walanchanurak/html/index.html">
+    <h2 class="name1" data-aos="fade-left" data-aos-duration="500"> MATACH </h2></a>
+
+<h2 class="name2" data-aos="fade-left" data-aos-duration="500">WALAN </br>CHANURAK </h2>
+</div>
+</div>
+
+<div class="shapes">
+<div class="circle"></div> 
+<div class="square"></div>
+<div class="triangle"></div>
+</div>
+
+
+<h3 class="rightHeader">SEE MY PROJECTS</h3> 
+
 
 <ul>
-<a href="calculator-1.html">Calculator project - 1</a> </br>
-<a href="calculator.html">Calculator project</a> </br>
+    
+<a href="self-portrait1.html">Self-portrait.jpeg</a></br>
 <a href="principle.html">10 Principles of Good design</a> </br>
-<a href="self-portrait1.html">self-portrait.jpeg</a></br>
-<a href="self-portrait2.html">self-portrait.jpeg</a>
+<a href="calculator.html">Calculator project - 2</a> </br>
+<a href="calculator-1.html">Calculator project - 1</a> </br>
+
+
+
+
+<div class="fullAbout">
+<h3 class="about"> ABOUT ME</h3>
+<p>Currently, a third-year student in the college of design 
+    pursuing graphic design at University of Illinois at Chicago. 
+    I am eagerly developing and expanding my graphic design practices 
+    as well as digital arts. I am also looking for internships opportunity 
+    that offered</p>
+</div>
+
 
 </ul>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
