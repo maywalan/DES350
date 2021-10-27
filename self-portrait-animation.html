@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Self-portrait animation</title>
+<style>
+    .main{
+        position: fixed;
+        left: 50%;
+        margin-left: -700px;
+    }
+    .face{
+    width: 380px;
+    height: 473px;
+    background-color: #f4c592;
+    position: absolute;
+    left: 513px;
+    top: 140px;
+    border-radius: 170px;
+    }
+    .hair1{
+        position: absolute;
+        top: 80px;
+        left: 510px;
+            height: 96px;
+            width: 380px;
+            border-radius: 150px 150px 0 0;
+            background-color: #1e1e1e;
+    }
+    .hair2{
+        position: absolute;
+        top: 145px;
+        left: 510px;
+            height: 87px;
+            width: 380px;
+            border-radius: 23px;
+            background-color: #1e1e1e;
+    }
+    .hairLeft{
+        position: absolute;
+        top: 265px;
+        left: 420px;
+            height: 66px;
+            width: 181px;
+            border-radius: 150px 150px 0 0;
+            transform: rotate(-90deg);
+            background-color: #1e1e1e;
+            z-index: -2;
+
+    }
+    .hairLeft2{
+        position: absolute;
+        top: 300px;
+        left: 420px;
+            height: 26px;
+            width: 181px;
+            border-radius: 23px;
+            transform: rotate(-90deg);
+            background-color: #1e1e1e;
+            z-index: -2;
+    }
+    .hairRight{
+        position: absolute;
+        top: 265px;
+        left: 810px;
+            height: 66px;
+            width: 181px;
+            border-radius: 150px 150px 0 0;
+            transform: rotate(90deg);
+            background-color: #1e1e1e;
+            z-index: -2;
+
+    }
+    .hairRight2{
+        position: absolute;
+        top: 300px;
+        left: 810px;
+            height: 26px;
+            width: 181px;
+            border-radius: 23px;
+            transform: rotate(90deg);
+            background-color: #1e1e1e;
+            z-index: -2;
+
+    }
+    .earLeft{
+        position: absolute;
+        top: 355px;
+        left: 455px;
+            height: 70px;
+            width: 95px;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-90deg);
+            background-color: #f4c592;
+         
+    }
+    .inEarLeft{
+        position: absolute;
+        top: 375px;
+        left: 465px;
+            height: 30px;
+            width: 65px;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-90deg);
+            background-color: #db9b5d;
+
+
+    }
+    .earRight{
+        position: absolute;
+        top: 355px;
+        left: 855px;
+            height: 70px;
+            width: 95px;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(90deg);
+            background-color: #f4c592;
+    
+    }
+    .inEarRight{
+        position: absolute;
+        top: 375px;
+        left: 875px;
+            height: 30px;
+            width: 65px;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(90deg);
+            background-color: #db9b5d;
+
+
+    }
+    .faceTop{
+        width: 264px;
+      height: 91px;
+      background-color: #f4c592;
+      border-radius: 120px / 50px;
+      position: absolute;
+        top: 193px;
+        left: 531px;
+    }
+    .hairShape{
+        width: 100;
+        height: 100;
+        border-width: 200px 150px 0 0px;
+        background-color: red;
+        
+    }
+    .triangleHair1{
+        position: absolute;
+        top: 198px;
+        left: 790px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 75px 108px 0 0px;
+        transform: rotate(-10deg);
+        border-color: #1e1e1e transparent transparent transparent;
+
+    }
+
+    .triangleHair2{
+        position: absolute;
+        top: 220px;
+        left: 836px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 65px 58px 0 0px;
+        transform: rotate(-5deg);
+        border-color: #1e1e1e transparent transparent transparent;
+
+    }
+    .eyeBrows1{
+        width: 25px;
+        height: 25px;
+        background: #1e1e1e;
+        border-radius: 50%;
+        position: absolute;
+        top: 295px;
+        left: 641px;
+    }
+    .eyeBrowsRec1{
+        width: 100px;
+        height: 10px;
+        border-radius: 8px;
+        background: #1e1e1e;
+        position: absolute;
+        transform: rotate(-10deg);
+        top: 303px;
+        left: 555px;
+    }
+    .eyeBrowsRec2{
+        width: 108px;
+        height: 14px;
+        border-radius: 8px;
+        background: #1e1e1e;
+        position: absolute;
+        transform: rotate(-3deg);
+        top: 308px;
+        left: 555px;
+    }
+    .eyeBrows2{
+        width: 25px;
+        height: 25px;
+        background: #1e1e1e;
+        border-radius: 50%;
+        position: absolute;
+        top: 280px;
+        left: 746px;
+    }
+    .eyeBrowsRec3{
+        width: 100px;
+        height: 10px;
+        border-radius: 8px;
+        background: #1e1e1e;
+        position: absolute;
+        transform: rotate(15deg);
+        top: 293px;
+        left: 758px;
+    }
+    .eyeBrowsRec4{
+        width: 108px;
+        height: 14px;
+        border-radius: 8px;
+        background: #1e1e1e;
+        position: absolute;
+        transform: rotate(9deg);
+        top: 298px;
+        left: 750px;
+    }
+    .eye1{
+        position: absolute;
+        top: 343px;
+        left: 555px;
+            height: 25px;
+            width: 110px;
+            border-radius: 70px 70px 0 0;
+            transform: rotate(0deg);
+            background-color: #db9b5d;
+
+    }
+    .eye1Low{
+        position: absolute;
+        top: 368px;
+        left: 555px;
+            height: 45px;
+            width: 96px;
+            border-radius: 40px 40px 0 0;
+            transform: rotate(180deg);
+            border-color:#db9b5d ;
+            border-width: 7px ;
+            border-style: solid;
+            background-color: white;
+    }
+    .blackEye1{
+        position: absolute;
+        top: 375px;
+        left: 579px;
+            height: 25px;
+            width: 60px;
+            border-radius: 70px 70px 0 0;
+            transform: rotate(180deg);
+            background-color: #1e1e1e;
+
+    }
+    .eye2{
+        position: absolute;
+        top: 343px;
+        left: 745px;
+            height: 25px;
+            width: 110px;
+            border-radius: 70px 70px 0 0;
+            transform: rotate(0deg);
+            background-color: #db9b5d;
+
+    }
+    .eye2Low{
+        position: absolute;
+        top: 368px;
+        left: 745px;
+            height: 45px;
+            width: 96px;
+            border-radius: 40px 40px 0 0;
+            transform: rotate(180deg);
+            border-color:#db9b5d ;
+            border-width: 7px ;
+            border-style: solid;
+            background-color: white;
+    }
+    .blackEye2{
+        position: absolute;
+        top: 375px;
+        left: 769px;
+            height: 25px;
+            width: 60px;
+            border-radius: 70px 70px 0 0;
+            transform: rotate(180deg);
+            background-color: #1e1e1e;
+    }
+    .pandaLeft{
+        position: absolute;
+        top: 430px;
+        left: 560px;
+            height: 25px;
+            width: 100px;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(180deg);
+            background-color: #da9663;
+    }
+    .pandaLeftIn{
+        position: absolute;
+        top: 427px;
+        left: 565px;
+            height: 15px;
+            width: 90px;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(180deg);
+            background-color: #f4c592;
+
+    }
+    .pandaRight{
+        position: absolute;
+        top: 430px;
+        left: 750px;
+            height: 25px;
+            width: 100px;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(180deg);
+            background-color: #da9663;
+    }
+    .pandaRightIn{
+        position: absolute;
+        top: 427px;
+        left: 755px;
+            height: 15px;
+            width: 90px;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(180deg);
+            background-color: #f4c592;
+
+    }
+    .nose{
+        position: absolute;
+        top: 475px;
+        left: 673px;
+            height: 25px;
+            width: 60px;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(180deg);
+            background-color: #da9663;
+    }
+    .mouth{
+        position: absolute;
+        top: 530px;
+        left: 630px;
+            height: 8px;
+            width: 150px;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(180deg);
+            background-color: #d8805d;
+    }
+    .mouthBottom{
+        position: absolute;
+        top: 548px;
+        left: 660px;
+            height: 12px;
+            width: 85px;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(180deg);
+            background-color: #da9663;
+    }
+</style>
+</head>
+
+<body>
+    <div class="main">
+<div class="face"></div>
+<div class="hair1"></div>
+<div class="hair2"></div>
+<div class="hairLeft"></div>
+<div class="hairLeft2"></div>
+<div class="hairRight"></div>
+<div class="hairRight2"></div>
+<div class="earLeft"></div>
+<div class="inEarLeft"></div>
+<div class="earRight"></div>
+<div class="inEarRight"></div>
+<div class="faceTop"></div>
+<div class="hairShape"></div>
+<div class="triangleHair1"></div>
+<div class="triangleHair2"></div>
+<div class="eyeBrows1"></div>
+<div class="eyeBrowsRec1"></div>
+<div class="eyeBrowsRec2"></div>
+<div class="eyeBrows2"></div>
+<div class="eyeBrowsRec3"></div>
+<div class="eyeBrowsRec4"></div>
+<div class="eye1"></div>
+<div class="eye1Low"></div>
+<div class="blackEye1"></div>
+<div class="eye2"></div>
+<div class="eye2Low"></div>
+<div class="blackEye2"></div>
+<div class="pandaLeft"></div>
+<div class="pandaLeftIn"></div>
+<div class="pandaRight"></div>
+<div class="pandaRightIn"></div>
+<div class="nose"></div>
+<div class="mouth"></div>
+<div class="mouthBottom"></div>
+
+    </div>
+</body>
+</html>
