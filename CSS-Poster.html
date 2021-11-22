@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Poster</title>
+<meta name="viewport" content="width-device-width, initial scale=1.0">
+<style>
+
+body{
+    margin: 0px;
+    padding:0px;
+    background-color: rgb(192, 98, 55);
+}
+.card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 90vh;
+    background: url("project-5-poster-final-BW.jpg") no-repeat center;
+    background-size: contain;
+}
+.card:hover{
+    background: url("02.gif") no-repeat center;
+    background-size: contain;
+}
+
+#preload{
+    background: url("project-5-poster-final.jpg") no-repeat -9999px -9999px;
+}
+</style>
+</head>
+
+
+<body>
+    <div id="preload"></div>
+    <div class="card"></div>
+    
+
+</body>
+</html>
