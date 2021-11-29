@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Death Valley</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<meta name="viewport" content="width-device-width, initial scale=1.0">
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+  
+    </script>
+
+
+<style>
+    
+/*Head*/
+img {
+    position: absolute; 
+  top: 0; 
+  left: 0; 
+   overflow: scroll;
+   z-index: -3;
+   max-width: 100%;
+  height: auto;
+  width: auto;
+  
+
+}
+
+html{
+    max-width: 100ch;
+    padding: 3em 1em;
+    margin: auto;
+    font-family: "Helvetica Neue";
+    scroll-behavior: smooth;
+   
+}
+h1{
+    font-size: 9em;
+    font-family: "Helvetica Neue";
+    letter-spacing: 30px;
+    color: #2f2a35;
+    font-weight: 100;
+    line-height: 150px;
+}
+.date{
+    color: #2f2a35;
+    position: relative;
+    top: -80px;
+    letter-spacing: 10px;
+    font-weight: 200;
+}
+.titleTop{
+    margin-top: 150px;
+}
+.nps{
+    text-decoration: none;
+    color: #2f2a35;
+    position: relative;
+    font-weight: 800;
+}
+.nps::before {  
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+.nps:hover::before {
+  transform: scaleX(1.2);
+  transform-origin: bottom left;
+}
+
+.nps::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #2f2a35;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+.nps:hover{
+    color: #ef6d3f;
+}
+h2{
+    font-size: 2em;
+    font-weight: 400;
+}
+.parkTop{
+    text-align: right;
+    margin-top: -60px;
+    color: #2f2a35;
+    font-weight: 800;
+}
+/*End of Head*/
+/*Paragraphs*/
+p{
+    position: relative;
+    top: 40px;
+    color: #2f2a35;
+    line-height: 28px;
+    width: 100%;
+    column-count: 3;
+    column-gap: 40px;
+   
+}
+span{
+
+float: left;
+line-height: 90%;
+width: .8em;
+font-size: 300%;
+}
+h3{
+    color: #2f2a35;
+    font-size: 1.8em;
+    position: relative;
+    top: 220px;
+    font-weight: 800;
+}
+h4{
+    color: #2f2a35;
+    font-size: 1.2em;
+    position: relative;
+    top: 220px;
+    font-weight: 800;
+}
+h5{
+    color: #ef6d3f;
+    font-size: 1.2em;
+    position: relative;
+    top: 220px;
+    font-weight: 800;
+}
+.actTwo{
+    position: relative;
+    left: 305px;
+    top: 200px;
+    width: 25%;
+}
+.actThree{
+    position: relative;
+    left: 620px;
+    top: 200px;
+    width: 20%;
+}
+.actFour{
+    position: relative;
+    left: 620px;
+    top: 1100px;
+    width: 30%;
+}
+.actFive{
+    position: relative;
+    left: 305px;
+    top: 1100px;
+    width: 30%;
+}
+.infoOne{
+    column-count: unset;
+    width: 30%;
+    line-height: 24px;
+    position: relative;
+    top: 200px;
+}
+.infoTwo{
+    column-count: unset;
+    width: 30%;
+    line-height: 24px;
+    position: relative;
+    top: 180px;
+    left: 305px;
+}
+.infoThree{
+    column-count: unset;
+    width: 30%;
+    line-height: 24px;
+    position: relative;
+    top: 180px;
+    left: 620px;
+}
+.infoFour{
+    column-count: unset;
+    width: 30%;
+    line-height: 24px;
+    position: relative;
+    top: 1080px;
+    left: 620px;
+    color: #ef6d3f !important ;
+}
+.infoFive{
+    column-count: unset;
+    width: 30%;
+    line-height: 24px;
+    position: relative;
+    top: 1080px;
+    left: 305px;
+    color: #ef6d3f !important ;
+}
+/*End of paragraph*/
+/*Start of visit*/
+.visit{
+    position: relative;
+    top:1400px;
+    font-weight: 800;
+    font-size: 10em;
+}
+.visit a{
+    text-decoration: none;
+    color: #ef6d3f;
+}
+.visit :hover{
+    color: #2f2a35;
+}
+.visit::before {  
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+.visit:hover::before {
+  transform: scaleX(0.7);
+  transform-origin: bottom left;
+  
+}
+.visit::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #ef6d3f;
+  z-index: -3;
+  transition: transform .3s ease;
+}
+
+.titleBottom{
+    position: relative;
+    top:1300px;
+    left: -268px;
+    color: #ef6d3f;
+    transform: rotate(180deg);
+}
+.map{
+    position: relative;
+    top:1300px;
+    float: right;
+    left: 0px;
+    transform: rotate(90deg);
+}
+.area{
+    position: relative;
+    top:1720px;
+    font-weight: 400;
+    float: right;
+    left: -220px;
+    transform: rotate(270deg);
+}
+.areaTwo{
+    position: relative;
+    top:1580px;
+    font-size: 1.7em;
+    float: right;
+    left: -75px;
+    transform: rotate(270deg);
+}
+.otherParks{
+    position: relative;
+    top:2100px;
+    font-weight:700;
+    color: #ef6d3f;
+}
+ul{
+    position: relative;
+    top:2070px;
+    left: -40px;
+    color: #ef6d3f;
+    font-weight: 100;
+    font-size: 4em;
+    letter-spacing:10px;
+    line-height: 120px;
+    list-style-type: none;
+    
+}
+
+li a{
+    text-decoration: none;
+    color: #ef6d3f;
+
+}
+.glac{
+    display: inline-block;
+    position: relative;
+}
+.glac:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ef6d3f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.glac:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.zion{
+    display: inline-block;
+    position: relative;
+}
+.zion:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ef6d3f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.zion:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.yell{
+    display: inline-block;
+    position: relative;
+}
+.yell:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ef6d3f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.yell:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+[data-aos="example-anim3"] {
+    transform: rotate(0deg);
+    transition-property: transform;
+}
+[data-aos="example-anim3"].aos-animate {
+  transform: rotate(90deg);
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  background-color: rgb(145, 145, 145);
+  opacity: 0.3;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+</style>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+    <img src="images/notext-05.jpg" id="bg" alt="">
+
+
+   
+        <h2>
+        <a href="https://www.nps.gov/index.htm" class="nps">NPS.GOV</a>
+        </h2>
+        <h2 class="parkTop">NATIONAL PARK</h2>
+  
+    
+    <h1 class="titleTop rellax" data-rellax-speed="3" data-aos="fade-down"  data-aos-duration="1000" >DEATH </br> VALLEY</h1>
+        <h2 class="date" data-aos="fade-down"  data-aos-duration="1000"  data-aos-delay="500">Est. October 31, 1994</h2>
+    <p data-aos="fade-up" data-aos-duration="1500">
+
+        <span>D</span>eath Valley is a desert valley </br> in Eastern California, 
+        in the northern Mojave Desert, bordering the Great Basin Desert. 
+        During summer, it is one of the hottest places on Earth, along with 
+        deserts in the Middle East and the Sahara. Death Valley's Badwater 
+        Basin is the point of lowest elevation in North America, at 282 feet 
+        (86 m) below sea level. It is 84.6 miles (136.2 km) east-southeast of 
+        Mount Whitney, the highest point in the contiguous United States, with 
+        an elevation of 14,505 feet (4,421 m). </br>&nbsp; &nbsp; &nbsp; &nbsp; On the afternoon of July 10, 1913, 
+        the United States Weather Bureau recorded a high temperature of 134 °F (56.7 °C) 
+        at Furnace Creek in Death Valley, which stands as the highest ambient air 
+        temperature ever recorded on the surface of the Earth. 
+
+        This reading, however, 
+        and several others taken in that period, a century ago, are in dispute by some modern experts. 
+        Lying mostly in Inyo County, California, near the border of California and Nevada, 
+        in the Great Basin, east of the Sierra Nevada mountains, Death Valley constitutes much of 
+        Death Valley National Park and is the principal feature of the Mojave and Colorado Deserts 
+        Biosphere Reserve. It runs from north to south between the Amargosa Range on the east and 
+        the Panamint Range on the west; the Grapevine Mountains and the Owlshead Mountains form its 
+        northern and southern boundaries, respectively. It has an area of about 3,000 sq mi (7,800 km2). 
+    </br>&nbsp; &nbsp; &nbsp;The highest point in Death Valley National Park is Telescope Peak, in the Panamint Range, 
+        which has an elevation of 11,043 feet (3,366 m).
+
+        Death Valley is a graben—a downdropped block of land between two mountain ranges. 
+        It lies at the southern end of a geological trough, Walker Lane, which runs north to Oregon. 
+        The valley is bisected by a right lateral strike slip fault system, comprising the Death Valley Fault 
+        and the Furnace Creek Fault. The eastern end of the left lateral Garlock Fault intersects the Death Valley Fault. 
+        Furnace Creek and the Amargosa River flow through part of the valley and eventually disappear 
+        into the sands of the valley floor. </br>&nbsp; &nbsp; &nbsp;Death Valley also contains salt pans. According to current 
+        geological consensus, at various times during the middle of the Pleistocene era, which ended 
+        roughly 10,000–12,000 years ago, an inland lake, Lake Manly, formed in Death Valley. 
+        The lake was nearly 100 miles (160 km) long and 600 feet (180 m) deep. The end-basin in a chain of 
+        lakes that began with Mono Lake, in the north, and continued through basins down the Owens River Valley, 
+        through Searles and China Lakes and the Panamint Valley, to the immediate west. 
+    </p>
+
+    <h3 class="things" data-aos="fade-left" data-aos-duration="1500">THINGS TO DO</h3>
+    <h4 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">SIGHTSEEING</h4>
+    <p class="infoOne" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">Many of the most famous places in the park can be visited by car. 
+        Don't miss these "must see" locations.</p>
+
+    <h4 class="actTwo" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">MOUNTIAN BIKING</h4>
+    <p class="infoTwo" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hundreds of miles of of dirt roads provide awesome mountain biking. 
+        Paved roads have narrow shoulders</p>
+    
+    <h4 class="actThree" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">HIKING</h4>
+    <p class="infoThree" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">From deep canyons to salt flats, sand dunes, and desert peaks, 
+        Death Valley is a hiker's paradise.</p>
+
+    <h5 class="actFour" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">NIGHT EXPLORATION</h5>
+    <p class="infoFour" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">Half the park is after dark! Learn about 
+        Death Valley's night sky viewing opportunities.</p>
+            
+    <h5 class="actFive" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">SUNRISE AND SUNSET</h5>
+    <p class="infoFive" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Looking for the best places to see sunrise or 
+        sunset in the park? Here are our recommendations!</p>
+                
+    <h1 class="visit" data-aos="fade-down" data-aos-duration="1000">
+        <a href="https://www.nps.gov/deva/index.htm">VISIT</a></h1>
+        <h1 class="titleBottom">DEATH </br> VALLEY</h1>
+
+    <h5 class="map" data-aos="example-anim3" data-aos="fade-down" data-aos-duration="1000">36°14′49″N
+    </br>116°49′01″W</h5>
+
+    <h5 class="area" data-aos="example-anim3" data-aos="fade-down" data-aos-duration="1000" > TOTAL AREA </h5>
+    <h5 class="areaTwo" data-aos="example-anim3" data-aos="fade-down" data-aos-duration="1000" > 5,270 mi²</h5> 
+
+    <h2 class="otherParks" data-aos="fade-right" data-aos-duration="500">EXPLORE OTHER PARKS</h2>
+    
+    <ul>
+        <li><a href="https://www.nps.gov/glac/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="glac">GLACIER</a></li>
+        <li><a href="https://www.nps.gov/zion/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="zion">ZION</a></li>
+        <li><a href="https://www.nps.gov/yell/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="yell">YELLOWSTONE</a></li>
+    </ul>
+    
+<!--Rellax function-->
+    
+  <script type="text/javascript" src="rellax.js"></script>
+  <script type="text/javascript" src="option.js"></script>
+  <script>
+    var rellax = new Rellax('.rellax', {
+      // center: true
+      callback: function (position) {
+        // callback every position change
+        console.log(position);
+      },
+      breakpoints: [576, 768, 1024]
+    });
+  </script>
+
+<!--AOS function-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+<!--Back to top function-->
+<script>
+    var mybutton = document.getElementById("myBtn");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>
