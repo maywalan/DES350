@@ -44,8 +44,6 @@ img {
   z-index: -3;
   height: auto;
   width: 100%;
-  
-
 }
 
 html{
@@ -145,12 +143,74 @@ h4{
     top: 220px;
     font-weight: 800;
 }
+h4 a{
+  text-decoration: none;
+  color: #2f2a35;
+}
+h4 :hover{
+    color: #ef6d3f;
+}
+h4::before {  
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+h4:hover::before {
+  transform: scaleX(0.18);
+  transform-origin: bottom left;
+  
+}
+.actTwo:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  
+}
+.actThree:hover::before {
+  transform: scaleX(0.5);
+  transform-origin: bottom left;
+  
+}
+h4::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #2f2a35;
+  z-index: -3;
+  transition: transform .3s ease;
+}
 h5{
     color: #ef6d3f;
     font-size: 1.2em;
     position: relative;
     top: 220px;
     font-weight: 800;
+}
+h5 a{
+  text-decoration: none;
+  color: #ef6d3f;
+}
+h5 :hover{
+    color: #2f2a35;
+}
+h5::before {  
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+h5:hover::before {
+  transform: scaleX(0.9);
+  transform-origin: bottom left;
+  
+}
+h5::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #ef6d3f;
+  z-index: -3;
+  transition: transform .3s ease;
 }
 .actTwo{
     position: relative;
@@ -266,21 +326,28 @@ h5{
     left: 0px;
     transform: rotate(90deg);
 }
-.area{
+.map:hover::before {
+  transform: scaleX(1.1);
+  transform-origin: bottom left;
+  
+}
+.area:not(.nohover){
     position: relative;
     top:1720px;
     font-weight: 400;
     float: right;
     left: -220px;
     transform: rotate(270deg);
+    pointer-events: none;
 }
-.areaTwo{
+.areaTwo:not(.nohover){
     position: relative;
     top:1580px;
     font-size: 1.7em;
     float: right;
     left: -75px;
     transform: rotate(270deg);
+    pointer-events: none;
 }
 .otherParks{
     position: relative;
@@ -290,13 +357,13 @@ h5{
 }
 ul{
     position: relative;
-    top:2070px;
+    top:2470px;
     left: -40px;
     color: #ef6d3f;
     font-weight: 100;
-    font-size: 4em;
+    font-size: 2em;
     letter-spacing:10px;
-    line-height: 120px;
+    line-height: 50px;
     list-style-type: none;
     
 }
@@ -306,16 +373,26 @@ li a{
     color: #ef6d3f;
 
 }
+ul > li {
+  display: flex;
+}
 .glac{
-    display: inline-block;
-    position: relative;
+    position: absolute;
+    top: 2387px;
+    left: 700px;
+    text-decoration: none;
+    color: #ef6d3f;
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing:10px;
+
 }
 .glac:after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #ef6d3f;
@@ -328,15 +405,22 @@ li a{
   transform-origin: bottom left;
 }
 .zion{
-    display: inline-block;
-    position: relative;
+  position: absolute;
+  top: 2369px;
+    left: 450px;
+    text-decoration: none;
+    color: #ef6d3f;
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing:10px;
+
 }
 .zion:after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #ef6d3f;
@@ -349,15 +433,22 @@ li a{
   transform-origin: bottom left;
 }
 .yell{
-    display: inline-block;
-    position: relative;
+  position: absolute;
+    text-decoration: none;
+    top: 2350px;
+    color: #ef6d3f;
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing:10px;
+
+
 }
 .yell:after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #ef6d3f;
@@ -449,43 +540,41 @@ li a{
     </p>
 
     <h3 class="things" data-aos="fade-left" data-aos-duration="1500">THINGS TO DO</h3>
-    <h4 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">SIGHTSEEING</h4>
+    <h4 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"><a href="https://www.nps.gov/deva/planyourvisit/sightseeing-park-highlights.htm">SIGHTSEEING</a></h4>
     <p class="infoOne" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">Many of the most famous places in the park can be visited by car. 
         Don't miss these "must see" locations.</p>
 
-    <h4 class="actTwo" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">MOUNTIAN BIKING</h4>
+    <h4 class="actTwo" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800"><a href="https://www.nps.gov/deva/planyourvisit/bikingandmtbiking.htm">MOUNTIAN BIKING</a></h4>
     <p class="infoTwo" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hundreds of miles of of dirt roads provide awesome mountain biking. 
         Paved roads have narrow shoulders</p>
     
-    <h4 class="actThree" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">HIKING</h4>
+    <h4 class="actThree" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000"><a href="https://www.nps.gov/deva/planyourvisit/hiking.htm">HIKING</a></h4>
     <p class="infoThree" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">From deep canyons to salt flats, sand dunes, and desert peaks, 
         Death Valley is a hiker's paradise.</p>
 
-    <h5 class="actFour" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">NIGHT EXPLORATION</h5>
+    <h5 class="actFour" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"><a href="https://www.nps.gov/deva/night-exploration.htm">NIGHT EXPLORATION</a></h5>
     <p class="infoFour" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">Half the park is after dark! Learn about 
         Death Valley's night sky viewing opportunities.</p>
             
-    <h5 class="actFive" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">SUNRISE AND SUNSET</h5>
+    <h5 class="actFive" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600"><a href="https://www.nps.gov/deva/planyourvisit/sunrise-and-sunset-in-death-valley.htm">SUNRISE AND SUNSET</a></h5>
     <p class="infoFive" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Looking for the best places to see sunrise or 
         sunset in the park? Here are our recommendations!</p>
                 
-    <h1 class="visit" data-aos="fade-down" data-aos-duration="1000">
+    <h1 class="visit" data-aos="fade-down" data-aos-duration="500">
         <a href="https://www.nps.gov/deva/index.htm">VISIT</a></h1>
         <h1 class="titleBottom">DEATH </br> VALLEY</h1>
 
-    <h5 class="map" data-aos="example-anim3" data-aos="fade-down" data-aos-duration="1000">36°14′49″N
-    </br>116°49′01″W</h5>
+    <h5 class="map" data-aos="example-anim3" data-aos="fade-down" data-aos-duration="1000"><a href="https://www.google.com/maps/place/Death+Valley,+CA/@36.5820167,-117.891846,8z/data=!3m1!4b1!4m5!3m4!1s0x80c739a21e8fffb1:0x1c897383d723dd25!8m2!3d36.5322649!4d-116.9325408">36°14′49″N
+    </br>116°49′01″W</a></h5>
 
     <h5 class="area" data-aos="example-anim3" data-aos="fade-down" data-aos-duration="1000" > TOTAL AREA </h5>
     <h5 class="areaTwo" data-aos="example-anim3" data-aos="fade-down" data-aos-duration="1000" > 5,270 mi²</h5> 
 
     <h2 class="otherParks" data-aos="fade-right" data-aos-duration="500">EXPLORE OTHER PARKS</h2>
     
-    <ul>
-        <li><a href="https://www.nps.gov/glac/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="glac">GLACIER</a></li>
-        <li><a href="https://www.nps.gov/zion/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="zion">ZION</a></li>
-        <li><a href="https://www.nps.gov/yell/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="yell">YELLOWSTONE</a></li>
-    </ul>
+        <p><a href="https://www.nps.gov/glac/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="glac">GLACIER</a></p>
+        <p><a href="https://www.nps.gov/zion/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="zion">ZION</a></p>
+        <p><a href="https://www.nps.gov/yell/index.htm" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400" class="yell">YELLOWSTONE</a></p>
     
 <!--Rellax function-->
     
